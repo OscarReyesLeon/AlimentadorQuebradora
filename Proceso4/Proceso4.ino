@@ -1,9 +1,8 @@
 #include <Controllino.h>
 
-float detenerAlimentador = 8.7/0.03;
-int muestras = 8;
+float detenerAlimentador = 8.0/0.03;
+int muestras = 16;
 int espera = 250;
-int preatasco = 4000; 
 int tciclo = 2000;
 
 void setup() {
@@ -14,17 +13,16 @@ void setup() {
 }
 
 void loop() {
-  delay(tciclo);
   float cargaPromedio = calculoMotor();
 
   if (cargaPromedio <= detenerAlimentador){
     digitalWrite(CONTROLLINO_D2, 1);
-    digitalWrite(CONTROLLINO_D3, 0);
+    digitalWrite(CONTROLLINO_D3, 1);
+    delay(tciclo);
   }
   else{
     digitalWrite(CONTROLLINO_D2, 0);
-    digitalWrite(CONTROLLINO_D3, 1);
-    delay(preatasco);
+    digitalWrite(CONTROLLINO_D3, 0);
   }
 }
 
