@@ -1,9 +1,9 @@
 #include <Controllino.h>
 
 float detenerAlimentador = 8.0/0.03;
-int muestras = 16;
-int espera = 250;
-int tciclo = 2000;
+int muestras = 8;
+int espera = 125;
+int tciclo = 4000;
 
 void setup() {
   pinMode(CONTROLLINO_A3, INPUT);
