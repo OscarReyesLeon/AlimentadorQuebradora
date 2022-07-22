@@ -3,12 +3,12 @@
 float detenerAlimentador = 8.0/0.03;
 int muestras = 8;
 int espera = 125;
-int tciclo = 4000;
 
 void setup() {
   pinMode(CONTROLLINO_A3, INPUT);
   pinMode(CONTROLLINO_D2, OUTPUT);
   pinMode(CONTROLLINO_D3, OUTPUT);
+  pinMode(CONTROLLINO_D6, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -18,11 +18,20 @@ void loop() {
   if (cargaPromedio <= detenerAlimentador){
     digitalWrite(CONTROLLINO_D2, 1);
     digitalWrite(CONTROLLINO_D3, 1);
-    delay(tciclo);
+    digitalWrite(CONTROLLINO_D6, 0);
+    delay(1000);
+    digitalWrite(CONTROLLINO_D6, 1);
   }
   else{
     digitalWrite(CONTROLLINO_D2, 0);
     digitalWrite(CONTROLLINO_D3, 0);
+    for(int i=0;i<10;i++)
+    {
+      digitalWrite(CONTROLLINO_D6, 1);
+      delay(50);
+      digitalWrite(CONTROLLINO_D6, 0);
+      delay(50);
+    }
   }
 }
 
