@@ -1,7 +1,7 @@
 #include <Controllino.h>
 
 float detenerAlimentador = 8.0/0.03;
-int muestras = 8;
+int muestras = 16;
 int espera = 125;
 
 void setup() {
@@ -19,13 +19,13 @@ void loop() {
     digitalWrite(CONTROLLINO_D2, 1);
     digitalWrite(CONTROLLINO_D3, 1);
     digitalWrite(CONTROLLINO_D6, 0);
-    delay(1000);
+    delay(500);
     digitalWrite(CONTROLLINO_D6, 1);
   }
   else{
     digitalWrite(CONTROLLINO_D2, 0);
     digitalWrite(CONTROLLINO_D3, 0);
-    for(int i=0;i<10;i++)
+    for(int i=0;i<20;i++)
     {
       digitalWrite(CONTROLLINO_D6, 1);
       delay(50);
