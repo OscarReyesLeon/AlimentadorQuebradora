@@ -9,15 +9,15 @@ En otras palabras, mantiene la producción constante sin atascar la quebradora.
 
 ### Problema común.
 
-El alimentador de una quebradora es una banda metálica. 
+El alimentador de una quebradora o molino es una banda metálica. 
 
 En un ambiente perfecto, la quebradora recibiría piedras de tamaños uniformes. Y siempre trabajaría de forma continua.
 
-Pero en la práctica, las tolvas reciben piedras de todos tamaños. Lo que causa que, las quebradoras se saturen o se atasquen.
+Pero en la práctica, reciben piedras de todos tamaños. Lo que causa que, las quebradoras y molinos se saturen o se atasquen.
 
 ### ¿Cómo funciona el programa?
 
-Por medio de un Controllino, se monitorea que la quebradora no se sature de material.
+Por medio de un Controllino, se monitorea que la quebradora o molino no se sature de material.
 
 En caso de un exceso de material, este programa por medio del Controllino detendrá el alimentador. 
 
