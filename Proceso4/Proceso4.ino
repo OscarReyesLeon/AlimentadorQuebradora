@@ -9,7 +9,6 @@ void setup() {
   pinMode(CONTROLLINO_A3, INPUT);
   pinMode(CONTROLLINO_D2, OUTPUT);
   pinMode(CONTROLLINO_D6, OUTPUT);
-  Serial.begin(9600);
 }
 
 void loop() {
